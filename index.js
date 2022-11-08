@@ -93,7 +93,7 @@ function iniciar(){
                   }
             }
             for(let i=0; i<imagenes.length; i++){
-                  if(imagenes[i].src != "http://127.0.0.7:5500/tema%205/worksheet3/ejer3/caudro.png"){
+                  if(imagenes[i].src != "https://alvaroferndez.github.io/juego-parejas/caudro.png"){
                         lista_resueltas.push("");
                   }
             }
