@@ -1,0 +1,23 @@
+body{
+      text-align: center;
+      color: white;
+      background-color: #82D2E4;
+      font-size: 2em;
+      height: 1000px;
+}
+
+#imagenes{
+      position: absolute;
+      width: 1000px;
+      height: 500px;
+      padding-left: 17%;
+      display: flex;
+      flex-wrap: wrap;
+}
+
+img{
+      width: 170px;
+      margin-left:20px;
+      margin-bottom:20px;
+      border-radius: 20px;
+}
