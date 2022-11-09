@@ -86,6 +86,11 @@ function iniciar(){
 
       function compararImagenes(lista){
             if(lista.length == 2){
+                  for(let imagen of imagenes){
+                        imagen.removeEventListener("click",cambiarImagen);
+                        setTimeout(() => imagen.addEventListener("click",cambiarImagen),1000);
+                  }
+
                   if(lista[0] != lista[1]){
                         setTimeout(() => voltearImagen(lista),1000);
                   }else if(lista[0] == lista[1]){
@@ -108,12 +113,17 @@ function iniciar(){
       lista_resueltas = [];
 
       function cambiarImagen(e){
+            if(check_contador == false){
+                  iniciarContador();
+                  check_contador = true;
+            }
             asignarImagen(e)
             comprobar.push(e.target.alt);
             compararImagenes(comprobar);
       }
 
       contador = undefined;
+      check_contador = false;
       for(let i=0; i<imagenes.length; i++){
             imagenes[i].addEventListener("click",cambiarImagen);
       }
@@ -122,5 +132,4 @@ function iniciar(){
 
 window.addEventListener("load", () =>{
       iniciar();
-      iniciarContador();
 })
